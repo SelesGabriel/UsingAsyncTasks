@@ -7,7 +7,8 @@ namespace UsingAsyncTasks
 {
     class Program
     {
-        static async Task Main(string[] args)
+        //static async Task Main(string[] args) //utilizando para chamar métodos assincronos
+        static void Main(string[] args) //utilizando para chamar métodos não assincronos
         {
             //Utilizando o WhenAll - O WhenAll serve para executar em segundo plano, todos os métodos em paralelo, e chamar ele quando a execução do anterior estiver ok, 
             //diminuindo o tempo total de carregamento
@@ -20,6 +21,7 @@ namespace UsingAsyncTasks
 
             //var stopwatch = new Stopwatch();
             //stopwatch.Start();
+            var semaforo = new Semaforo();
             try
             {
                 //Cancelamento de Task
@@ -28,7 +30,7 @@ namespace UsingAsyncTasks
                 //Console.WriteLine("Cancelamento apos tecla");
                 //await ExecutaCancelamentoAposTeclar();
 
-
+                semaforo.Main();
 
 
 
